@@ -1,0 +1,49 @@
+.swiper {
+  margin: 6rem auto;
+  h2 {
+    font-family: "Gilroy-Semibold";
+    font-size: 2rem;
+    text-align: center;
+  }
+  .test_p {
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+  }
+  width: $container-lg;
+  padding: 5rem;
+
+  .swiper-wrapper {
+    article {
+      @include gradientBackground;
+      padding: 1.8rem 2.2rem;
+      border-radius: 1rem;
+      cursor: default;
+      font-size: 0.9rem;
+      filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.18));
+
+      p {
+        margin-bottom: 1.5rem;
+      }
+
+      .patient {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .avatar {
+          width: 2.5rem;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .swiper-pagination-bullet {
+    background: $primary-color;
+  }
+}

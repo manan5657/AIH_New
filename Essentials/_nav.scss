@@ -1,0 +1,114 @@
+nav {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  @include gradientBackground;
+  box-shadow: 0 1rem 1rem rgba($black-color, 0.1);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    button {
+      display: none;
+    }
+
+    a {
+      color: $white-color;
+      font-weight: 600;
+      font-family: "Gilroy-Medium";
+      font-size: 0.9rem;
+    }
+    .nav__logo h3 {
+      //   color: $white-color;
+      font-size: 1.2rem;
+      font-family: "Gilroy-Bold";
+      letter-spacing: 2px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    .container {
+      button {
+        display: inline-block;
+        background: transparent;
+        color: $white-color;
+        font-size: 2rem;
+        cursor: pointer;
+
+        &#close__nav-btn {
+          display: none;
+        }
+      }
+
+      ul {
+        position: fixed;
+        right: 5%;
+        top: 5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        perspective: 300px;
+        display: none;
+
+        li {
+          width: 100%;
+          opacity: 0;
+          animation: flipNavItem 0.3s ease forwards;
+          transform-origin: top;
+
+          &:nth-child(2) {
+            animation-delay: 0.2s;
+          }
+          &:nth-child(3) {
+            animation-delay: 0.4s;
+          }
+          &:nth-child(4) {
+            animation-delay: 0.6s;
+          }
+          &:nth-child(5) {
+            animation-delay: 0.8s;
+          }
+          @keyframes flipNavItem {
+            0% {
+              transform: rotateX(90deg);
+            }
+
+            100% {
+              transform: rotateX(0deg);
+              opacity: 1;
+            }
+          }
+
+          a {
+            color: $white-color;
+            height: 100%;
+            display: block;
+            padding: 1.5rem 2rem;
+            border-radius: 0;
+            background-image: linear-gradient(
+              $primary-color-variant,
+              darken($primary-color-variant, 12%)
+            );
+
+            &.btn {
+              background: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

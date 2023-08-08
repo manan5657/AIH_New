@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  background-image: linear-gradient(135deg, #480ca8, #4cc9f0);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.search-bar {
+  width: 50%;
+  height: 4rem;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  border-radius: 2rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.4));
+  font-family: "Gilroy-Medium";
+}
+
+.search-bar input {
+  width: 30rem;
+  transition: all 0.4s ease;
+  background-color: #333;
+  padding: 8px 30px;
+  outline: none;
+  border: none;
+  filter: drop-shadow(0 2px 15px rgba(0, 0, 0, 0.9));
+  border-radius: 2rem;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.dropdown {
+  content: "";
+  border-radius: 2rem;
+  position: absolute;
+  width: 100%;
+  filter: drop-shadow(0 2px 15px rgba(0, 0, 0, 0.05));
+  height: 25vw;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+}
+
+.search-bar input:focus {
+  border: 1px solid #6200ff;
+}
+
+.search-bar input:focus ~ .dropdown {
+  display: inline-block;
+}
+
+.search-bar input:hover {
+  scale: 1.04;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+.model {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.model button {
+  display: inline-block;
+  width: fit-content;
+  height: 2.5rem;
+  width: 7.2rem;
+  border-radius: 2rem;
+  background-color: #f72585;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: all 0.4s ease;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9));
+}
+
+.model button:hover {
+  background-color: #bb0a59;
+  transform: translateY(-2px);
+  scale: 1.1;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}

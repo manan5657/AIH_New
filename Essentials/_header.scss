@@ -1,0 +1,37 @@
+header {
+  @include gradientBackground;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  .container {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__content {
+      h1 {
+        font-size: 3.5rem;
+        line-height: 1.25;
+        font-family: "Gilroy-Medium";
+      }
+
+      p {
+        margin: 1rem 0 2rem;
+        color: $light-color;
+        font-size: 1.1rem;
+        font-family: "Gilroy-Medium";
+        width: 70%;
+      }
+    }
+
+    .header__image {
+      transform-style: preserve-3d;
+      width: 30vw;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35));
+      margin-right: 3vw;
+    }
+  }
+}

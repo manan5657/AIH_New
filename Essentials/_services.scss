@@ -1,0 +1,44 @@
+#services {
+  h2 {
+    font-family: "Gilroy-Semibold";
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    article {
+      @include gradientBackground;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      display: flex;
+      gap: 1.5rem;
+      height: fit-content;
+      transition: all 0.4s ease;
+
+      &:hover {
+        margin-top: -0.5rem;
+      }
+
+      i {
+        margin-top: -0.5rem;
+        font-size: 1.7rem;
+      }
+
+      div {
+        h4 {
+          margin-bottom: 1rem;
+          font-family: "Gilroy-Bold";
+        }
+        small {
+          font-family: "Gilroy-Medium";
+        }
+      }
+    }
+  }
+}
