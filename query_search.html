@@ -13,15 +13,105 @@
   <body>
     <div id="main">
       <div class="search-bar">
-        <input class="input" type="text" placeholder="Search Query Here ..." />
-        <div class="dropdown"></div>
+        <input
+          class="input"
+          type="text"
+          placeholder="Search Query Here ..."
+          onchange="performSearch()"
+        />
+        <div class="dropdown">
+          <div class="drp-content">
+            <p class="drp-p">
+              How do I schedule an appointment with a specific doctor?
+            </p>
+            <img class="drp-i" src="./img/icons8-hospital-100.png" alt="" />
+          </div>
+          <div class="drp-content">
+            <p class="drp-p">Do you accept my health insurance?</p>
+            <img class="drp-i" src="./img/icons8-hospital-100.png" alt="" />
+          </div>
+          <div class="drp-content">
+            <p class="drp-p">
+              What are the guidelines for visiting patients in critical care
+              units?
+            </p>
+            <img class="drp-i" src="./img/icons8-hospital-100.png" alt="" />
+          </div>
+          <div class="drp-content">
+            <p class="drp-p">
+              What is the hospital's policy on patient privacy and data
+              security?
+            </p>
+            <img class="drp-i" src="./img/icons8-hospital-100.png" alt="" />
+          </div>
+        </div>
         <div class="model">
           <button class="audio"><i class="ri-mic-fill"></i></button>
           <button class="file"><i class="ri-upload-cloud-fill"></i></button>
         </div>
       </div>
+      <!-- <div class="container">
+        <div class="card">
+          <div class="heart">
+            <div class="circle"></div>
+            <img src="./img/Untitled design(9).png" alt="" />
+          </div>
+          <div class="info">
+            <h1 class="title">Cardiologist</h1>
+            <h3>Life is precious, keep your heart in check.</h3>
+            <h2>Time Slots</h2>
+            <div class="slots">
+              <button>Morning</button><button class="active">Afternoon</button
+              ><button>Evening</button>
+            </div>
+            <div class="appointment">
+              <button>Get Appointment</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="cards">
+        <div class="cardnum">
+          <img src="./img/Untitled design(9).png" alt="" />
+          <h1 class="title">Cardiologist</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nam.
+          </p>
+          <div class="slotd">
+            <button class="slots">Morning</button
+            ><button class="slots active">Afternoon</button
+            ><button class="slots">Evening</button>
+          </div>
+          <button class="ga">Get Appointment</button>
+        </div>
+        <div class="cardnum">
+          <img src="./img/Untitled design(9).png" alt="" />
+          <h1 class="title">Cardiologist</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nam.
+          </p>
+          <div class="slotd">
+            <button class="slots">Morning</button
+            ><button class="slots active">Afternoon</button
+            ><button class="slots">Evening</button>
+          </div>
+          <button class="ga">Get Appointment</button>
+        </div>
+        <div class="cardnum">
+          <img src="./img/Untitled design(9).png" alt="" />
+          <h1 class="title">Cardiologist</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nam.
+          </p>
+          <div class="slotd">
+            <button class="slots">Morning</button
+            ><button class="slots active">Afternoon</button
+            ><button class="slots">Evening</button>
+          </div>
+          <button class="ga">Get Appointment</button>
+        </div>
+      </div>
     </div>
-
     <script src="./query.js"></script>
   </body>
 </html>
